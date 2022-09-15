@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Articles.css";
 
 export default function Articles() {
@@ -13,14 +14,17 @@ export default function Articles() {
   return (
     <>
       <h1>Articles</h1>
+
       <div className="tousArticles">
         {Articles.map((planete) => (
-          <div className="container" key={planete.id}>
-            <h2>{planete.nom}</h2>
-            <div>
-              <img src={planete.image} />
+          <Link to={`/planete/${planete.id}`} key={planete.id}>
+            <div className="container">
+              <h2>{planete.nom}</h2>
+              <div>
+                <img src={planete.image} />
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>

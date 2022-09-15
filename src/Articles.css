@@ -22,6 +22,11 @@ ul {
   flex-wrap: wrap;
 }
 
+.tousArticles>a{
+  text-decoration: none;
+  color: black;
+}
+
 .container>div>img{
   width: 100%;
 }
